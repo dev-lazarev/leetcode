@@ -29,6 +29,21 @@ func TestLongestPalindrome(t *testing.T) {
 		Output: "bb",
 	})
 
+	tt.Add(testCase{
+		Input:  "a",
+		Output: "a",
+	})
+
+	tt.Add(testCase{
+		Input:  "ac",
+		Output: "a",
+	})
+
+	tt.Add(testCase{
+		Input:  "abb",
+		Output: "bb",
+	})
+
 	for _, c := range tt.Tc {
 		if result := longestPalindrome(c.Input); result != c.Output {
 			t.Fatalf("longestPalindrome(%v) != %v, expectrd = %v", c.Input, result, c.Output)
