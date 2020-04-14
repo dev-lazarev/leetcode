@@ -24,6 +24,11 @@ func TestReverse(t *testing.T) {
 	})
 
 	tt.Add(testCase{
+		Input:  1,
+		Output: 1,
+	})
+
+	tt.Add(testCase{
 		Input:  -123,
 		Output: -321,
 	})
@@ -31,6 +36,11 @@ func TestReverse(t *testing.T) {
 	tt.Add(testCase{
 		Input:  120,
 		Output: 21,
+	})
+
+	tt.Add(testCase{
+		Input:  300005,
+		Output: 500003,
 	})
 
 	for _, c := range tt.Tc {
